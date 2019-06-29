@@ -19,7 +19,7 @@ zplug "zsh-users/zsh-syntax-highlighting",      defer:1
 zplug "zsh-users/zsh-history-substring-search", defer:2
 
 zplug "supercrabtree/k"
-zplug "sindresorhus/pure"
+zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
