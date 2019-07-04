@@ -16,7 +16,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # System Maintainence
-alias upd='trizen -Syyu && flatpak update'
+alias upd='yay -Syyu && flatpak update'
 alias p='sudo pacman --color auto'
 alias t='trizen'
 alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
