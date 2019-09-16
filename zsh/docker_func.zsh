@@ -47,7 +47,7 @@ couchdb(){
 }
 
 postgres(){
-	del_stopped couchdb
+	del_stopped postgres
 
 	docker run -d \
 		-p 5432:5432 \
