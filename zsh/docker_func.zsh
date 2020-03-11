@@ -76,3 +76,14 @@ swaggerui(){
 	--name swaggerui \
 	swaggerapi/swagger-ui
 }
+
+dgraph(){
+	del_stopped dgraph
+
+	docker run -d \
+	-p 8000:8000 \
+	-p 8080:8080 \
+	-p 9080:9080 \
+	--name dgraph \
+	dgraph/standalone:latest
+}
