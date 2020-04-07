@@ -16,6 +16,6 @@ $ make help
 
 ## License
 
-Copyright (c) 2019 Andreas Bauer
+Copyright (c) 2019-2020 Andreas Bauer
 
 Licensed under the [MIT license](LICENSE).
