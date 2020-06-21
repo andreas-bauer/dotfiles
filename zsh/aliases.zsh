@@ -37,3 +37,4 @@ alias gc='git commit --verbose'
 alias gd='git diff'
 alias gco='git checkout '
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias gbr="git branch | grep -v "master" | xargs git branch -D"
