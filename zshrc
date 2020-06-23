@@ -2,9 +2,7 @@
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
 export EDITOR=vim
-export GOPATH=$HOME/dev/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 
 setopt auto_cd
 
