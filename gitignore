@@ -3,3 +3,6 @@
 
 # Linux trash folder
 .Trash-*<Paste>
+
+# macOS DS_Store files
+.DS_Store
