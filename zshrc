@@ -66,5 +66,5 @@ zle -N expand-alias-space
 bindkey " " expand-alias-space
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/andi/.sdkman"
-[[ -s "/home/andi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andi/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="/Users/andi/.sdkman"
+[[ -s "/Users/andi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andi/.sdkman/bin/sdkman-init.sh"
