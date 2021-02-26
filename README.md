@@ -14,8 +14,12 @@ You can see a list of all possible install options by using the following comman
 $ make help
 ```
 
+## Thanks to and inspired by
+* [Jess Frazelle](https://blog.jessfraz.com/) and her [dotfiles](https://github.com/jessfraz/dotfiles)
+* [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles](https://github.com/mathiasbynens/dotfiles)
+
 ## License
 
-Copyright (c) 2019-2020 Andreas Bauer
+Copyright (c) 2019-2021 Andreas Bauer
 
 Licensed under the [MIT license](LICENSE).
