@@ -15,7 +15,6 @@ alias l="ls -lF ${colorflag}"
 alias ll='ls -l'
 alias l.='ls -d .* '
 alias ll.='ls -la'
-alias k='k -h --no-vcs'
 
 # Easier navigation
 alias ..='cd ..'

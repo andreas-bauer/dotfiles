@@ -18,7 +18,6 @@ zplug "tarruda/zsh-autosuggestions",            defer:0
 zplug "zsh-users/zsh-syntax-highlighting",      defer:1
 zplug "zsh-users/zsh-history-substring-search", defer:2
 
-zplug "supercrabtree/k"
 zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 
 # Install plugins if there are plugins that have not been installed
