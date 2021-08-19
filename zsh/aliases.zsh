@@ -11,10 +11,9 @@ else # macOS `ls`
 fi
 
 # List 
-alias l="ls -lF ${colorflag}"
-alias ll='ls -l'
-alias l.='ls -d .* '
-alias ll.='ls -la'
+alias l="exa --long --header --group-directories-first --color-scale"
+alias lg="exa --long --header --group-directories-first --color-scale --git"
+alias ll="exa --long --header --group-directories-first --color-scale --git --all"
 
 # Easier navigation
 alias ..='cd ..'
