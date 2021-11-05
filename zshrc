@@ -54,6 +54,9 @@ if zplug check zsh-users/zsh-history-substring-search; then
 
     bindkey '^[[A' history-substring-search-up
     bindkey '^[[B' history-substring-search-down
+
+    bindkey '^[j' history-substring-search-up
+    bindkey '^[k' history-substring-search-down
 fi
 
 # Expand aliases
