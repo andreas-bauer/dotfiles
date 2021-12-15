@@ -87,3 +87,14 @@ dgraph(){
 	--name dgraph \
 	dgraph/standalone:latest
 }
+
+rstudio(){
+  del_stop rstudio
+
+  docker run -d \
+  -p 8787:8787 \
+  -e PASSWORD=foo \
+  -e ROOT=TRUE \
+  --name rstudio \
+  torkar/docker_bda
+}
