@@ -1,11 +1,16 @@
 .PHONY: all
-all: dotfiles zplug
+all: dotfiles zplug sdkman
 
 .PHONY: zplug
 zplug: ## Clone zplug into ~/.zplug if not exist.
 	if [ ! -d ~/.zplug ]; then \
     	git clone https://github.com/zplug/zplug ~/.zplug; \
     fi;
+
+.PHONY: sdkman
+	if [! -d ~/.sdkman ]; then \
+		curl -s "https://get.sdkman.io" | bash; \
+	fi;
 
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
