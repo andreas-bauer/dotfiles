@@ -31,14 +31,8 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-
 # Load Configs
 for config (~/.zsh/*.zsh) source $config
-
-# Tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-	source /etc/profile.d/vte.sh
-fi
 
 if zplug check zsh-users/zsh-autosuggestions; then
     ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
@@ -69,6 +63,22 @@ zle -N expand-alias-space
 # Key bindings
 bindkey " " expand-alias-space
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/andi/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/andi/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/andi/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/andi/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/andi/.sdkman"
 [[ -s "/Users/andi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andi/.sdkman/bin/sdkman-init.sh"
+
