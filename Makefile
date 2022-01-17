@@ -8,7 +8,8 @@ zplug: ## Clone zplug into ~/.zplug if not exist.
     fi;
 
 .PHONY: sdkman
-	if [! -d ~/.sdkman ]; then \
+sdkman: ## Install SDKMAN
+	if [ ! -d ~/.sdkman ]; then \
 		curl -s "https://get.sdkman.io" | bash; \
 	fi;
 
