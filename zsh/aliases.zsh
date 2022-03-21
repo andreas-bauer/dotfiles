@@ -48,11 +48,12 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
 # GIT
-alias gs='git status '
+alias gs='git status'
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit --verbose'
 alias gd='git diff'
 alias gco='git checkout '
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
-alias gbr="git branch | grep -v "master" | xargs git branch -D"
+#alias gbr='git branch | grep -v "master" | xargs git branch -D'
+alias grh='git reset --hard HEAD'
