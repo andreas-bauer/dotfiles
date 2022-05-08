@@ -10,7 +10,7 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
-# List 
+# List
 alias l="exa --long --header --group-directories-first --color-scale"
 alias lg="exa --long --header --group-directories-first --color-scale --git"
 alias ll="exa --long --header --group-directories-first --color-scale --git --all"
@@ -28,7 +28,7 @@ alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've install
 alias orphans="pacman -Qdt" # List orphan programs
 alias sdn="sudo shutdown now"
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
-	
+
 # Make mount command readable
 alias mount='mount |column -t'
 
@@ -57,3 +57,6 @@ alias gco='git checkout '
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 #alias gbr='git branch | grep -v "master" | xargs git branch -D'
 alias grh='git reset --hard HEAD'
+
+# VIM
+alias vi='nvim'

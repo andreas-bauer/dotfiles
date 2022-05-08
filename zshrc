@@ -1,10 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Exports
 export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export EDITOR=vim
+export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
 export PATH=$PATH:/opt/homebrew/bin
 
 setopt auto_cd
@@ -63,6 +71,13 @@ zle -N expand-alias-space
 
 # Key bindings
 bindkey " " expand-alias-space
+
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_ALT_C_COMMAND='fd --type d --follow'
+bindkey 'ƒ' fzf-cd-widget #<ALT>+f
+bindkey '†' fzf-file-widget #<ALT>+t
+bindkey '®' fzf-history-widget # <ALT>+r
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
