@@ -22,6 +22,7 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/gitignore $(HOME)/.gitignore;
 	ln -sfn $(CURDIR)/doom.d $(HOME)/.doom.d;
 	ln -sfn $(CURDIR)/kitty $(HOME)/.config/kitty;
+	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
 
 .PHONY: help
 help:
