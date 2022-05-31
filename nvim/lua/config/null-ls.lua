@@ -3,6 +3,7 @@ nls.setup({
 	sources = {
 		nls.builtins.formatting.stylua,
 		nls.builtins.diagnostics.eslint,
+		nls.builtins.diagnostics.markdownlint,
 		nls.builtins.completion.spell,
 		nls.builtins.formatting.prettier.with({
 			extra_args = { "--single-quote", "false" },
