@@ -1,35 +1,5 @@
 local g = vim.g
 
-g.nvim_tree_git_hl = 1 -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
-g.nvim_tree_highlight_opened_files = 1 -- 0 by default, will enable folder and file icon highlight for opened files/directories.
-g.nvim_tree_root_folder_modifier = ":~" -- This is the default. See :help filename-modifiers for more options
-g.nvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names
-g.nvim_tree_group_empty = 1 --  0 by default, compact folders that only contain a single folder into one node in the file tree
-g.nvim_tree_icon_padding = " " -- one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
-g.nvim_tree_symlink_arrow = " >> " --  defaults to ' ➛ '. used as a separator between symlinks' source and target.
-g.nvim_tree_respect_buf_cwd = 1 -- 0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
-
-g.nvim_tree_show_icons = { git = 1, folders = 1, files = 1, folder_arrows = 1 }
-g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = {
-		unstaged = "",
-		staged = "S",
-		unmerged = "",
-		renamed = "➜",
-		deleted = "",
-		untracked = "U",
-		ignored = "◌",
-	},
-	folder = {
-		default = "",
-		open = "",
-		empty = "",
-		empty_open = "",
-		symlink = "",
-	},
-}
 local tree_cb = require("nvim-tree.config").nvim_tree_callback
 require("nvim-tree").setup({
 	-- disables netrw completely
@@ -50,11 +20,18 @@ require("nvim-tree").setup({
 		-- this option hides files and folders starting with a dot `.`
 		dotfiles = false,
 	},
+	-- 0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+	respect_buf_cwd = true,
 	-- show lsp diagnostics in the signcolumn
 	diagnostics = {
 		enable = true,
 		show_on_dirs = false,
-		icons = { hint = "", info = "", warning = "", error = "" },
+		icons = {
+			hint = "",
+			info = "",
+			warning = "",
+			error = "",
+		},
 	},
 	git = { enable = true, ignore = true, timeout = 400 },
 	-- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
@@ -101,15 +78,57 @@ require("nvim-tree").setup({
 		},
 	},
 	renderer = {
-		indent_markers = {
-			enable = true,
-			icons = {
-				corner = "└ ",
-				edge = "│ ",
-				none = "  ",
+	add_trailing = true, -- 0 by default, append a trailing slash to folder names
+	group_empty = false,
+	highlight_git = true, -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
+	highlight_opened_files = "icon",
+	root_folder_modifier = ":~",
+	indent_markers = {
+	  enable = true,
+	  icons = {
+		corner = "└ ",
+		edge = "│ ",
+		none = "  ",
+	  },
+	},
+	icons = {
+		webdev_colors = true,
+		git_placement = "before",
+		padding = " ",
+		symlink_arrow = " ➛ ",
+		show = {
+			file = true,
+			folder = true,
+			folder_arrow = true,
+			git = true,
+		},
+		glyphs = {
+			default = "",
+			symlink = "",
+			folder = {
+				arrow_closed = "",
+				arrow_open = "",
+				default = "",
+				open = "",
+				empty = "",
+				empty_open = "",
+				symlink = "",
+				symlink_open = "",
+			},
+			git = {
+				unstaged = "✗",
+				staged = "✓",
+				unmerged = "",
+				renamed = "➜",
+				untracked = "U",
+				deleted = "",
+				ignored = "◌",
 			},
 		},
 	},
+	special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
+	},
+
 	view = {
 		-- show line numbers in tree disabled
 		number = false,
