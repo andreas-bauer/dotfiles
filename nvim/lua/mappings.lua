@@ -42,6 +42,9 @@ map("x", "J", ":move '>+1<CR>gv-gv", default_options)
 map("n", "<leader>vd", ":colorscheme duskfox<CR>", default_options )
 map("n", "<leader>vl", ":colorscheme dayfox<CR>", default_options )
 
+-- Toggle display of white space chars
+map("n", "<leader><TAB><TAB>", ":set invlist<CR>", default_options )
+
 -- Nvim Tree
 map("n", "<C-n>", ":NvimTreeToggle<CR>", {noremap = true})
 
