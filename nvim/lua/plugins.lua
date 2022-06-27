@@ -33,7 +33,8 @@ packer.startup(function(use)
 	-- actual plugins list
 	use("wbthomason/packer.nvim")
 
-  use({ "EdenEast/nightfox.nvim", config = get_config("nightfox") })
+  -- use({ "EdenEast/nightfox.nvim", config = get_config("nightfox") })
+	use({ "catppuccin/nvim", as = "catppuccin", config = get_config("catppuccin") })
 
 	use({
 		"nvim-telescope/telescope.nvim",
