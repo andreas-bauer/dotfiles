@@ -5,6 +5,7 @@ nls.setup({
 		nls.builtins.diagnostics.eslint,
 		nls.builtins.diagnostics.markdownlint,
 		nls.builtins.completion.spell,
+		nls.builtins.diagnostics.vale,
 		nls.builtins.formatting.prettier.with({
 			extra_args = { "--single-quote", "false" },
 		}),
