@@ -60,6 +60,7 @@ packer.startup(function(use)
 		"akinsho/nvim-bufferline.lua",
 		requires = "kyazdani42/nvim-web-devicons",
 		event = "BufReadPre",
+    tag = "v2.*",
 		config = get_config("bufferline"),
 	})
 
