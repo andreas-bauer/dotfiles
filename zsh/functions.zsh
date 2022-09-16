@@ -4,7 +4,7 @@
 function mk() {
   mkdir -p "$@" && cd "$@" || exit
 }
- 
+
 # Extra many types of compressed packages
 # Credit: http://nparikh.org/notes/zshrc.txt
 extract() {
@@ -59,3 +59,8 @@ fs() {
 tre() {
 	tree -aC -I '.git' --dirsfirst "$@" | less -FRNX
 }
+
+validateYaml() {
+    python -c 'import yaml,sys;yaml.safe_load(sys.stdin)' < $1
+}
+
