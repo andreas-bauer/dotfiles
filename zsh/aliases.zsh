@@ -29,6 +29,9 @@ alias orphans="pacman -Qdt" # List orphan programs
 alias sdn="sudo shutdown now"
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
 
+# show more then 16 history commands (macOS)
+alias history="history 1"
+
 # Make mount command readable
 alias mount='mount |column -t'
 
