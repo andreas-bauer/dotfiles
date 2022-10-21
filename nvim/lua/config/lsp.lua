@@ -21,7 +21,7 @@ local function get_python_path(workspace)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 local servers = {
 	"bashls",
@@ -33,8 +33,8 @@ local servers = {
 	"yamlls",
 	"jsonls",
 	"gopls",
-  "clangd",
-  "cmake"
+	"clangd",
+	"cmake"
 }
 
 -- Mappings.
@@ -49,8 +49,7 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
 	-- disable formatting for LSP clients as this is handled by null-ls
-	client.resolved_capabilities.document_formatting = false
-	client.resolved_capabilities.document_range_formatting = false
+	client.server_capabilities.documentFormattingProvider = nil
 
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
