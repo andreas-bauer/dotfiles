@@ -38,6 +38,7 @@ alias mount='mount |column -t'
 # Important Directories
 alias dev='cd ~/dev'
 alias dl="cd ~/Downloads"
+alias wiki="Library/CloudStorage/OneDrive-BTH/sync/myWiki"
 
 # Get week number
 alias week='date +%V'
@@ -55,6 +56,7 @@ alias gs='git status'
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit --verbose'
+alias gca='git commit --amend'
 alias gd='git diff'
 alias gco='git checkout '
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
