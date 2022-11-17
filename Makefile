@@ -13,6 +13,13 @@ sdkman: ## Install SDKMAN
 		curl -s "https://get.sdkman.io" | bash; \
 	fi;
 
+.PHONY: brew-min
+brew-min: ## Install minimal dev setup via brew
+	brew install git
+	brew install exa
+	brew install kitty
+	brew install --cask keepassxc
+
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/vimrc $(HOME)/.vimrc;
