@@ -20,6 +20,13 @@ brew-min: ## Install minimal dev setup via brew
 	brew install kitty
 	brew install --cask keepassxc
 
+.PHONY: brew-font
+brew-font: ## Install fonts via brew
+	brew tap homebrew/cask-fonts
+	brew install --cask font-fontawesome
+	brew tap epk/epk
+	brew install --cask font-sf-mono-nerd-font
+
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/vimrc $(HOME)/.vimrc;
