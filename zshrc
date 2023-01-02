@@ -13,7 +13,7 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
-export PATH=$PATH:/opt/homebrew/bin
+export PATH="/opt/homebrew/bin:${PATH}"
 
 setopt auto_cd
 
