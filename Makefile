@@ -1,11 +1,22 @@
 .PHONY: all
-all: dotfiles zplug sdkman
+all: dotfiles zplug sdkman ohmyzsh
 
 .PHONY: zplug
 zplug: ## Clone zplug into ~/.zplug if not exist.
 	if [ ! -d ~/.zplug ]; then \
     	git clone https://github.com/zplug/zplug ~/.zplug; \
     fi;
+
+.PHONY: ohmyzsh
+ohmyzsh: ## Install oh-my-zsh
+	if [ ! -d ~/.oh-my-zsh ]; then \
+		curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash; \
+	fi;
+
+.PHONY: ohmyzsh-plugins
+ohmyzsh-plugins: ## Install oh-my-zsh plugins
+	git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $(HOME)/.oh-my-zsh/custom/themes/powerlevel10k
 
 .PHONY: sdkman
 sdkman: ## Install SDKMAN
