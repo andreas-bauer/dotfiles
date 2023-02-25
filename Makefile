@@ -1,11 +1,6 @@
 .PHONY: all
-all: dotfiles zplug sdkman ohmyzsh
+all: dotfiles sdkman ohmyzsh
 
-.PHONY: zplug
-zplug: ## Clone zplug into ~/.zplug if not exist.
-	if [ ! -d ~/.zplug ]; then \
-    	git clone https://github.com/zplug/zplug ~/.zplug; \
-    fi;
 
 .PHONY: ohmyzsh
 ohmyzsh: ## Install oh-my-zsh
