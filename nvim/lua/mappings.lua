@@ -74,14 +74,6 @@ map( "n", "<space>fg", ":Telescope live_grep<CR>", { noremap = true })
 map( "n", "<space>fb", ":Telescope buffers<CR>", { noremap = true })
 map( "n", "<space>fh", ":Telescope help_tags<CR>", { noremap = true })
 
--- LSP
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
-local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-vim.api.nvim_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-
 function EscapePair()
 	local closers = { ")", "]", "}", ">", "'", '"', "`", "," }
 	local line = vim.api.nvim_get_current_line()
