@@ -23,7 +23,7 @@ bindkey 'ƒ' fzf-cd-widget #<ALT>+f
 bindkey '†' fzf-file-widget #<ALT>+t
 bindkey '®' fzf-history-widget # <ALT>+r
 
-plugins=(git zsh-autosuggestions fzf sudo globalias)
+plugins=(git zsh-autosuggestions fzf sudo globalias zsh-syntax-highlighting)
 
 # Load Configs
 source $ZSH/oh-my-zsh.sh
