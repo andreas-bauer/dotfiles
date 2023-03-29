@@ -101,11 +101,11 @@ packer.startup(function(use)
 		config = get_config("lsp-signature"),
 	})
 
-  use({
-		"L3MON4D3/LuaSnip",
-		requires = "saadparwaiz1/cmp_luasnip",
-		config = get_config("luasnip"),
-	})
+ --  use({
+	-- 	"L3MON4D3/LuaSnip",
+	-- 	requires = "saadparwaiz1/cmp_luasnip",
+	-- 	config = get_config("luasnip"),
+	-- })
 
 	use({ "onsails/lspkind-nvim", requires = { "famiu/bufdelete.nvim" } })
 
@@ -128,5 +128,7 @@ packer.startup(function(use)
 	use({ "windwp/nvim-autopairs", config = get_config("autopairs") })
 
   use({ "ray-x/go.nvim", config = get_config("go"), ft = { "go" } })
+
+  use({ "folke/which-key.nvim", config = get_config("which-key") })
 
 end)
