@@ -37,11 +37,15 @@ map("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_options)
 -- map("n", "<Down>", ":resize +1<CR>", default_options)
 
 -- Autocorrect spelling from previous error
-map("i", "<c-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", default_options)
+map("i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", default_options)
 
 -- Move selected line / block of text in visual mode
 map("x", "K", ":move '<-2<CR>gv-gv", default_options)
 map("x", "J", ":move '>+1<CR>gv-gv", default_options)
+
+-- Better VIM scroll
+map("n", "<C-j>", "10jzz", { noremap = true })
+map("n", "<C-k>", "10kzz", { noremap = true })
 
 -- Change theme
 map("n", "<leader>vd", ":Catppuccin mocha<CR>", default_options )
