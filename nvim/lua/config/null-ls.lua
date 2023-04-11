@@ -4,9 +4,8 @@ nls.setup({
 		nls.builtins.formatting.stylua,
 		nls.builtins.diagnostics.eslint,
 		nls.builtins.diagnostics.markdownlint,
-		nls.builtins.diagnostics.ruff,
+		nls.builtins.diagnostics.flake8,
 		nls.builtins.completion.spell,
-		nls.builtins.diagnostics.vale,
 		nls.builtins.formatting.prettier.with({
 			extra_args = { "--single-quote", "false" },
 		}),
