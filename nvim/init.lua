@@ -8,6 +8,9 @@ require("options")
 -- Vim autocommands/autogroups
 require("autocmd")
 
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 -- enable filetypee.lua
 -- This feature is currently opt-in
 -- as it does not yet completely match all of the filetypes covered by filetype.vim
