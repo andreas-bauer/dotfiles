@@ -1,3 +1,7 @@
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- References to ./lua/
 -- Plugin management via Packer
 require("plugins")
@@ -17,4 +21,5 @@ vim.opt.termguicolors = true
 vim.g.do_filetype_lua = nil
 -- disable filetype.vim
 vim.g.did_load_filetypes = nil
+
 
