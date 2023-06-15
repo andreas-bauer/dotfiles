@@ -29,8 +29,7 @@ plugins=(git zsh-autosuggestions fzf sudo globalias zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 for config (~/.zsh/*.zsh) source $config
 
-# Z to jump around
-. /Users/andi/.dotfiles/z.sh
+eval "$(zoxide init zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
