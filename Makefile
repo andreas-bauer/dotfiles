@@ -30,8 +30,8 @@ brew-min: ## Install minimal dev setup via brew
 brew-font: ## Install fonts via brew
 	brew tap homebrew/cask-fonts
 	brew install --cask font-fontawesome
-	brew tap epk/epk
-	brew install --cask font-sf-mono-nerd-font
+	brew install --cask font-cascadia-mono
+	brew install --cask font-cascadia-mono-pl
 
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
