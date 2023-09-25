@@ -43,10 +43,6 @@ map("i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", default_options)
 map("x", "K", ":move '<-2<CR>gv-gv", default_options)
 map("x", "J", ":move '>+1<CR>gv-gv", default_options)
 
--- Better VIM scroll
-map("n", "<C-j>", "10jzz", { noremap = true })
-map("n", "<C-k>", "10kzz", { noremap = true })
-
 -- Change theme
 map("n", "<leader>vd", ":Catppuccin mocha<CR>", default_options )
 map("n", "<leader>vl", ":Catppuccin latte<CR>", default_options )
