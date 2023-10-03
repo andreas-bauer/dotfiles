@@ -22,7 +22,7 @@ sdkman: ## Install SDKMAN
 .PHONY: brew-min
 brew-min: ## Install minimal dev setup via brew
 	brew install git
-	brew install exa
+	brew install eza
 	brew install kitty
 	brew install --cask keepassxc
 
