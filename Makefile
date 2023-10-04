@@ -1,5 +1,5 @@
 .PHONY: all
-all: dotfiles sdkman ohmyzsh
+all: dotfiles sdkman ohmyzsh ohmyzsh-plugins
 
 
 .PHONY: ohmyzsh
