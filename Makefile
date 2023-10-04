@@ -35,7 +35,6 @@ brew-font: ## Install fonts via brew
 
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
-	ln -sfn $(CURDIR)/vimrc $(HOME)/.vimrc;
 	ln -sfn $(CURDIR)/zshrc $(HOME)/.zshrc;
 	ln -sfn $(CURDIR)/zsh $(HOME)/.zsh;
 	ln -sfn $(CURDIR)/gitconfig $(HOME)/.gitconfig;
