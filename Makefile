@@ -23,6 +23,7 @@ sdkman: ## Install SDKMAN
 brew-min: ## Install minimal dev setup via brew
 	brew install git
 	brew install eza
+	brew install zoxide
 	brew install kitty
 	brew install --cask keepassxc
 
