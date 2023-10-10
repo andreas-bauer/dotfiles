@@ -3,14 +3,14 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- References to ./lua/
--- Plugin management via Packer
-require("plugins")
 -- Vim mappings, see lua/config/which.lua for more mappings
 require("mappings")
 -- All non plugin related (vim) options
 require("options")
 -- Vim autocommands/autogroups
 require("autocmd")
+-- Plugin management via Lazy
+require("lazy-config")
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true

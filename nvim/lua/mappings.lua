@@ -19,8 +19,8 @@ map("v", ">", ">gv", default_options)
 map("v", "p", '"_dP', default_options)
 
 -- delete without yanking
-map("n", "<leader>d", '"_d', default_options)
-map("v", "<leader>d", '"_d', default_options)
+-- map("n", "<leader>d", '"_d', default_options) -- Conflict with LSP keymap for debugging
+-- map("v", "<leader>d", '"_d', default_options) -- Conflict with LSP keymap for debugging
 map("n", "<leader>dd", '"_dd', default_options)
 
 -- Tab switch buffer
@@ -29,12 +29,6 @@ map("n", "<S-TAB>", ":bprevious<CR>", default_options)
 
 -- Cancel search highlighting with ESC
 map("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_options)
-
--- Resizing panes
--- map("n", "<Left>", ":vertical resize +1<CR>", default_options)
--- map("n", "<Right>", ":vertical resize -1<CR>", default_options)
--- map("n", "<Up>", ":resize -1<CR>", default_options)
--- map("n", "<Down>", ":resize +1<CR>", default_options)
 
 -- Autocorrect spelling from previous error
 map("i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", default_options)
@@ -51,51 +45,15 @@ map("n", "<leader>vl", ":Catppuccin latte<CR>", default_options )
 map("n", "<leader><TAB><TAB>", ":set invlist<CR>", default_options )
 
 -- Nvim Tree
-map("n", "<C-n>", ":NvimTreeToggle<CR>", {noremap = true})
-
--- starlite mappings
-map("n", "*", function()
-	return require("starlite").star()
-end, default_options)
-map("n", "g*", function()
-	return require("starlite").g_star()
-end, default_options)
-map("n", "#", function()
-	return require("starlite").hash()
-end, default_options)
-map("n", "g#", function()
-	return require("starlite").g_hash()
-end, default_options)
+map( "n", "<leader>ee", ":NvimTreeToggle<CR>", { noremap = true, desc = "Toggle file explorer" })
+map( "n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle file explorer on current file" })
+map( "n", "<leader>ec", ":NvimTreeCollapse<CR>", { noremap = true, desc = "Collapse file explorer" })
+map( "n", "<leader>er", ":NvimTreeRefresh<CR>", { noremap = true, desc = "Refresh file explorer" })
 
 -- Telescope
-map( "n", "<space>ff", ":Telescope find_files<CR>", { noremap = true })
-map( "n", "<space>fd", ":Telescope file_browser<CR>", { noremap = true })
-map( "n", "<space>fg", ":Telescope live_grep<CR>", { noremap = true })
-map( "n", "<space>fb", ":Telescope buffers<CR>", { noremap = true })
-map( "n", "<space>fh", ":Telescope help_tags<CR>", { noremap = true })
+map( "n", "<space>ff", ":Telescope find_files<CR>", { noremap = true }) -- grep files in cwd
+map( "n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true }) -- grep string in cwd
+map( "n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true })
+map( "n", "<leader>fh", ":Telescope help_tags<CR>", { noremap = true })
+map( "n", "<leader>fc", ":Telescope grep_string<cr>", { noremap = true }) -- grep string under cursor in cwd
 
-function EscapePair()
-	local closers = { ")", "]", "}", ">", "'", '"', "`", "," }
-	local line = vim.api.nvim_get_current_line()
-	local row, col = unpack(vim.api.nvim_win_get_cursor(0))
-	local after = line:sub(col + 1, -1)
-	local closer_col = #after + 1
-	local closer_i = nil
-	for i, closer in ipairs(closers) do
-		local cur_index, _ = after:find(closer)
-		if cur_index and (cur_index < closer_col) then
-			closer_col = cur_index
-			closer_i = i
-		end
-	end
-	if closer_i then
-		vim.api.nvim_win_set_cursor(0, { row, col + closer_col })
-	else
-		vim.api.nvim_win_set_cursor(0, { row, col + 1 })
-	end
-end
-
--- move over a closing element in insert mode
-map("i", "<C-l>", function()
-	return EscapePair()
-end, default_options)
