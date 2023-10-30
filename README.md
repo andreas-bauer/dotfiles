@@ -27,6 +27,7 @@ sdkman                         Install SDKMAN
 * [Jess Frazelle](https://blog.jessfraz.com/) and her [dotfiles](https://github.com/jessfraz/dotfiles)
 * [Mathias Bynens](https://mathiasbynens.be/) and his [dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Michael Peter](https://github.com/Allaman) and his [NVIM config](https://github.com/Allaman/nvim)
+* [Josean Martinez](https://github.com/josean-dev) and his [dotfiles](https://github.com/josean-dev/dev-environment-files/tree/main)
 
 ## License
 
