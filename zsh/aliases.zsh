@@ -11,9 +11,9 @@ else # macOS `ls`
 fi
 
 # List
-alias l="eza --long --header --group-directories-first --color-scale"
-alias lg="eza --long --header --group-directories-first --color-scale --git"
-alias ll="eza --long --header --group-directories-first --color-scale --git --all"
+alias l="eza --long --header --group-directories-first --color-scale size"
+alias lg="eza --long --header --group-directories-first --color-scale size --git"
+alias ll="eza --long --header --group-directories-first --color-scale size --git --all"
 
 # Easier navigation
 alias ..='cd ..'
