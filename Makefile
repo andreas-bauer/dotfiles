@@ -43,6 +43,7 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/doom.d $(HOME)/.doom.d;
 	ln -sfn $(CURDIR)/kitty $(HOME)/.config/kitty;
 	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
+	ln -sfn $(CURDIR)/starship.toml $(HOME)/.config/starship.toml;
 
 .PHONY: help
 help:
