@@ -40,6 +40,7 @@ return {
           "bash",
           "dockerfile",
           "go",
+          "rust",
           "java",
           "python",
           "latex",
