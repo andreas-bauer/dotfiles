@@ -44,7 +44,7 @@ return {
         formatting.black,
         diagnostics.eslint_d.with({ -- js/ts linter
           condition = function(utils)
-            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
+            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
           end,
         }),
       },
