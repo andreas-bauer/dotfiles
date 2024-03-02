@@ -22,6 +22,7 @@ sdkman: ## Install SDKMAN
 .PHONY: brew-min
 brew-min: ## Install minimal dev setup via brew
 	brew install git
+	brew install git-delta
 	brew install eza
 	brew install zoxide
 	brew install kitty
