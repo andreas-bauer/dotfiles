@@ -44,6 +44,9 @@ alias wiki="Library/CloudStorage/OneDrive-BTH/sync/myWiki"
 # Get week number
 alias week='date +%V'
 
+# Simple Python HTTP server
+alias serve='python3 -m http.server'
+
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
