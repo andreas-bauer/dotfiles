@@ -25,6 +25,7 @@ brew-min: ## Install minimal dev setup via brew
 	brew install git-delta
 	brew install eza
 	brew install zoxide
+	brew install atuin
 	brew install kitty
 	brew install --cask keepassxc
 
