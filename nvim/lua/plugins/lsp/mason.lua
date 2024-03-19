@@ -31,7 +31,6 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "svelte",
         "lua_ls",
         "pyright",
         "ruff_lsp",
