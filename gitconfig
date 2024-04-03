@@ -7,6 +7,9 @@
     excludesfile = ~/.gitignore
     pager = delta
 
+[init]
+    defaultBranch = main
+
 [gc]
     autoDetach = false
 
@@ -34,3 +37,12 @@
 
 [diff]
     colorMoved = default
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    defaultKeyCommand = ssh-add -L
