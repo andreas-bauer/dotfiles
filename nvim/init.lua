@@ -21,5 +21,5 @@ vim.opt.termguicolors = true
 vim.g.do_filetype_lua = nil
 -- disable filetype.vim
 vim.g.did_load_filetypes = nil
-
-
+-- for JoosepAlviste/nvim-ts-context-commentstring
+vim.g.skip_ts_context_commentstring_module = true
