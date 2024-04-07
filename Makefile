@@ -27,6 +27,8 @@ brew-min: ## Install minimal dev setup via brew
 	brew install zoxide
 	brew install atuin
 	brew install kitty
+	brew install neovim
+	brew install starship
 	brew install --cask keepassxc
 
 .PHONY: brew-font
