@@ -12,6 +12,7 @@ ohmyzsh: ## Install oh-my-zsh
 ohmyzsh-plugins: ## Install oh-my-zsh plugins
 	git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $(HOME)/.oh-my-zsh/custom/themes/powerlevel10k
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 .PHONY: sdkman
 sdkman: ## Install SDKMAN
@@ -24,6 +25,7 @@ brew-min: ## Install minimal dev setup via brew
 	brew install git
 	brew install git-delta
 	brew install eza
+	brew install fzf
 	brew install zoxide
 	brew install atuin
 	brew install kitty
