@@ -58,6 +58,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # GIT
 alias gs='git status'
 alias ga='git add '
+alias gp='git push '
 alias gb='git branch '
 alias gc='git commit --verbose'
 alias gca='git commit --amend'
