@@ -43,6 +43,9 @@ map("n", "<leader>vl", ":Catppuccin latte<CR>", default_options)
 -- Toggle display of white space chars
 map("n", "<leader><TAB><TAB>", ":set invlist<CR>", default_options)
 
+-- Oil file explorer
+map("n", "-", ":Oil<CR>", { noremap = true, desc = "Open parent directory" })
+
 -- Nvim Tree
 map("n", "<leader>ee", ":NvimTreeToggle<CR>", { noremap = true, desc = "Toggle file explorer" })
 map("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { noremap = true, desc = "Toggle file explorer on current file" })
@@ -55,6 +58,3 @@ map("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, desc = "Tel
 map("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, desc = "Telescope: find open buffer" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { noremap = true })
 map("n", "<leader>fc", ":Telescope grep_string<cr>", { noremap = true, desc = "Telescope: find string under cursor" })
-
--- Format code using LSP
-map("n", "<leader>fm", vim.lsp.buf.format, { noremap = true, desc = "Format code using LSP" })
