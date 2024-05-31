@@ -22,7 +22,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-# System Maintainence
+# System Maintenance
 alias upd='yay -Syyu && flatpak update'
 alias p='sudo pacman --color auto'
 alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
@@ -37,7 +37,7 @@ alias history="history 1"
 # Make mount command readable
 alias mount='mount |column -t'
 
-# Important Directories
+# Important directories
 alias dev='cd ~/dev'
 alias dl="cd ~/Downloads"
 alias wiki="Library/CloudStorage/OneDrive-BTH/sync/myWiki"
