@@ -22,6 +22,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# Terminal
+alias c='clear'
+alias q='exit'
+
 # System Maintenance
 alias upd='yay -Syyu && flatpak update'
 alias p='sudo pacman --color auto'
