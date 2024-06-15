@@ -4,13 +4,20 @@
 
 ## Installation
 
+First, clone the repository:
 ```console
-$ git clone git@github.com:andreas-bauer/dotfiles.git ~/.dotfiles
+git clone git@github.com:andreas-bauer/dotfiles.git ~/.dotfiles
+```
+
+The installation of dependencies and linking of symlinks is done via a Makefile.
+If you run `make` without any arguments it will install and link all dependencies and configs.
+
+```console
 $ cd ~/.dotfiles
 $ make
 ```
 
-You can see a list of all possible install options by using `make help`:
+For a selective installation of dependencies and configs, run `make help` to see a list of all options.
 
 ```console
 $ make help
