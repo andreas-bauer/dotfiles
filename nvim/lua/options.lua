@@ -4,7 +4,6 @@ local o = vim.opt
 local wo = vim.wo
 local fn = vim.fn
 
-vim.cmd("set inccommand=split")
 o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50" -- block in normal and beam cursor in insert mode
 o.mouse = "a" -- enable mouse in all modes
 o.updatetime = 300 -- faster completion
@@ -27,10 +26,11 @@ o.showtabline = 2 -- always show tabs
 o.spelllang = "en_us" -- set spell language
 o.spell = true -- enable spell check
 if settings.global_statusline then
-	o.laststatus = 3
+  o.laststatus = 3
 else
-	o.laststatus = 2
+  o.laststatus = 2
 end
+o.inccommand = "split" -- "for incsearch while sub
 o.smartcase = true -- smart case
 o.smartindent = true -- make indenting smarter again
 o.splitbelow = true -- force all horizontal splits to go below current window
@@ -54,7 +54,7 @@ o.colorcolumn = "99999"
 o.wildmode = "full"
 o.lazyredraw = true -- do not redraw screen while running macros
 if utils.isNotEmpty(settings.grepprg) then
-	o.grepprg = settings.grepprg
+  o.grepprg = settings.grepprg
 end
 o.completeopt = { "menu", "menuone", "noselect", "noinsert" } -- A comma separated list of options for Insert mode completion
 o.wildignorecase = true -- When set case is ignored when completing file names and directories
