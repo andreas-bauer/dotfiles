@@ -53,7 +53,7 @@ map("n", "<leader>ec", ":NvimTreeCollapse<CR>", { noremap = true, desc = "Collap
 map("n", "<leader>er", ":NvimTreeRefresh<CR>", { noremap = true, desc = "Refresh file explorer" })
 
 -- Telescope
-map("n", "<leader>ff", ":Telescope find_files<CR>", { noremap = true, desc = "Telescope: find files" })
+map("n", "<leader>ff", ":Telescope find_files hidden=true<CR>", { noremap = true, desc = "Telescope: find files" })
 map("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, desc = "Telescope: find string" })
 map("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, desc = "Telescope: find open buffer" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { noremap = true })
