@@ -75,3 +75,4 @@ alias grh='git reset --hard HEAD'
 
 # VIM
 alias vi='nvim'
+alias v='fzf --multi --preview "bat -n --color=always {}" --bind "enter:become(nvim {+})"'
