@@ -15,13 +15,6 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 zstyle ':omz:update' mode auto # update automatically without asking
 zstyle ':omz:update' frequency 13
 
-# fzf
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_ALT_C_COMMAND='fd --type d --follow'
-bindkey 'ƒ' fzf-cd-widget #<ALT>+f
-bindkey '†' fzf-file-widget #<ALT>+t
-bindkey '®' fzf-history-widget # <ALT>+r
-
 plugins=(git zsh-autosuggestions fzf sudo globalias zsh-syntax-highlighting)
 
 # Load Configs
