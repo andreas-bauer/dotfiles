@@ -13,7 +13,7 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "truncate " },
-        file_ignore_patterns = { "^node_modules/", "^build/", "^dist/", "package%-lock.json" },
+        file_ignore_patterns = { "^.git/", "^node_modules/", "^build/", "^dist/", "package%-lock.json", "^.next/" },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
