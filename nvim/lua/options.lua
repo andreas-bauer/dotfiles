@@ -23,7 +23,7 @@ o.relativenumber = settings.relative_number
 o.cmdheight = 1 -- space for displaying messages/commands
 o.showmode = false -- we don't need to see things like -- INSERT -- anymore
 o.showtabline = 2 -- always show tabs
-o.spelllang = "en_us" -- set spell language
+o.spelllang = "en_us,de_de" -- set spell language
 o.spell = true -- enable spell check
 if settings.global_statusline then
   o.laststatus = 3
