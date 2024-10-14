@@ -77,7 +77,7 @@ return {
     })
 
     -- configure typescript server with plugin
-    lspconfig["tsserver"].setup({
+    lspconfig["ts_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -116,7 +116,7 @@ return {
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      cmd = {"rustup", "run", "stable", "rust-analyzer"},
+      cmd = { "rustup", "run", "stable", "rust-analyzer" },
       settings = {
         ["rust-analyzer"] = {
           standalone = true,
@@ -125,10 +125,10 @@ return {
           },
           checkOnSave = {
             command = "clippy",
-          }
+          },
         },
       },
-      filetypes = {"rust"},
+      filetypes = { "rust" },
     })
 
     -- configure lua server (with special settings)
