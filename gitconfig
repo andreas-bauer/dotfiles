@@ -39,7 +39,7 @@
     colorMoved = default
 
 [commit]
-    gpgsign = true
+    gpgsign = false
 
 [gpg]
     format = ssh
