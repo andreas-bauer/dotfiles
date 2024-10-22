@@ -69,9 +69,15 @@ alias gc='git commit --verbose'
 alias gca='git commit --amend'
 alias gd='git diff'
 alias gco='git checkout '
-alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
-#alias gbr='git branch | grep -v "master" | xargs git branch -D'
+alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gruf='git ls-files --other --exclude-standard | xargs rm -rf'
 alias grh='git reset --hard HEAD'
+#alias gbr='git branch | grep -v "master" | xargs git branch -D'
+
+# git [f]uzzy check[o]ut
+gfo() {
+  git branch --no-color --sort=-committerdate --format='%(refname:short)' | fzf --header 'git checkout' | xargs git checkout
+}
 
 # VIM
 alias vi='nvim'
