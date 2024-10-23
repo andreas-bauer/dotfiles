@@ -41,11 +41,6 @@ alias history="history 1"
 # Make mount command readable
 alias mount='mount |column -t'
 
-# Important directories
-alias dev='cd ~/dev'
-alias dl="cd ~/Downloads"
-alias wiki="Library/CloudStorage/OneDrive-BTH/sync/myWiki"
-
 # Get week number
 alias week='date +%V'
 
