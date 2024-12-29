@@ -1,0 +1,9 @@
+font-size = 18
+theme = catppuccin-mocha
+background-opacity = 0.9
+background-blur-radius = 20
+
+# Quick terminal
+quick-terminal-position = center
+keybind = global:cmd+enter=toggle_quick_terminal
+

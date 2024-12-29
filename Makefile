@@ -28,7 +28,7 @@ brew-min: ## Install minimal dev setup via brew
 	brew install fzf
 	brew install zoxide
 	brew install atuin
-	brew install kitty
+	brew install ghostty
 	brew install neovim
 	brew install starship
 	brew install --cask keepassxc
@@ -48,6 +48,7 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/gitignore $(HOME)/.gitignore;
 	ln -sfn $(CURDIR)/doom.d $(HOME)/.doom.d;
 	ln -sfn $(CURDIR)/kitty $(HOME)/.config/kitty;
+	ln -sfn $(CURDIR)/ghostty $(HOME)/.config/ghostty;
 	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
 	ln -sfn $(CURDIR)/starship.toml $(HOME)/.config/starship.toml;
 
