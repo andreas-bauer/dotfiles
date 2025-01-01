@@ -5,6 +5,7 @@
 ## Installation
 
 First, clone the repository:
+
 ```console
 git clone git@github.com:andreas-bauer/dotfiles.git ~/.dotfiles
 ```
@@ -39,6 +40,6 @@ sdkman                         Install SDKMAN
 
 ## License
 
-Copyright (c) 2019-2024 Andreas Bauer
+Copyright (c) 2019-2025 Andreas Bauer
 
 Licensed under the [MIT license](LICENSE).
