@@ -58,3 +58,9 @@ map("n", "<leader>fg", ":Telescope live_grep<CR>", { noremap = true, desc = "Tel
 map("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, desc = "Telescope: find open buffer" })
 map("n", "<leader>fh", ":Telescope help_tags<CR>", { noremap = true })
 map("n", "<leader>fc", ":Telescope grep_string<cr>", { noremap = true, desc = "Telescope: find string under cursor" })
+map(
+  "n",
+  "<leader>fs",
+  ":Telescope lsp_dynamic_workspace_symbols<cr>",
+  { noremap = true, desc = "Telescope: find string under cursor" }
+)
