@@ -20,7 +20,14 @@
     required = true
 
 [push]
-    default = current
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 
 [interactive]
     diffFilter = delta --color-only
@@ -37,6 +44,7 @@
 
 [diff]
     colorMoved = default
+	  algorithm = histogram
 
 [commit]
     gpgsign = false
@@ -46,3 +54,12 @@
 
 [gpg "ssh"]
     defaultKeyCommand = ssh-add -L
+
+[branch]
+  	sort = -committerdate
+
+[column]
+	  ui = auto
+
+[tag]
+	  sort = version:refname
