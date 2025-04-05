@@ -53,14 +53,14 @@ return {
             init_selection = "<CR>",
             scope_incremental = "<CR>",
             node_incremental = "<TAB>",
-            node_decremental = "<S-TAB>"
+            node_decremental = "<S-TAB>",
           },
         },
-        -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
-        },
+        -- -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
+        -- context_commentstring = {
+        --   enable = true,
+        --   enable_autocmd = false,
+        -- },
       })
     end,
   },
