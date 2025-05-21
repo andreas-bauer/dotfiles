@@ -38,7 +38,6 @@ brew-min: ## Install minimal dev setup via brew
 
 .PHONY: brew-font
 brew-font: ## Install fonts via brew
-	brew tap homebrew/cask-fonts
 	brew install --cask font-fontawesome
 
 .PHONY: dotfiles
