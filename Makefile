@@ -1,6 +1,5 @@
 .PHONY: all
-all: dotfiles sdkman ohmyzsh ohmyzsh-plugins
-
+all: dotfiles ohmyzsh ohmyzsh-plugins
 
 .PHONY: ohmyzsh
 ohmyzsh: ## Install oh-my-zsh
@@ -14,12 +13,6 @@ ohmyzsh-plugins: ## Install oh-my-zsh plugins
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $(HOME)/.oh-my-zsh/custom/themes/powerlevel10k
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-.PHONY: sdkman
-sdkman: ## Install SDKMAN
-	if [ ! -d ~/.sdkman ]; then \
-		curl -s "https://get.sdkman.io" | bash; \
-	fi;
-
 .PHONY: brew-min
 brew-min: ## Install minimal dev setup via brew
 	brew install git
@@ -31,14 +24,11 @@ brew-min: ## Install minimal dev setup via brew
 	brew install ghostty
 	brew install neovim
 	brew install starship
-	brew install --cask keepassxc
 
 .PHONY: brew-font
 brew-font: ## Install fonts via brew
 	brew tap homebrew/cask-fonts
 	brew install --cask font-fontawesome
-	brew install --cask font-cascadia-mono
-	brew install --cask font-cascadia-mono-pl
 
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
