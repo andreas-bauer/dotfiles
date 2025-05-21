@@ -1,5 +1,5 @@
 .PHONY: all
-all: dotfiles ohmyzsh ohmyzsh-plugins
+all: ohmyzsh ohmyzsh-plugins brew-min brew-font dotfiles
 
 .PHONY: ohmyzsh
 ohmyzsh: ## Install oh-my-zsh
@@ -9,9 +9,12 @@ ohmyzsh: ## Install oh-my-zsh
 
 .PHONY: ohmyzsh-plugins
 ohmyzsh-plugins: ## Install oh-my-zsh plugins
-	git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $(HOME)/.oh-my-zsh/custom/themes/powerlevel10k
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then \
+		git clone https://github.com/zsh-users/zsh-autosuggestions $(HOME)/.oh-my-zsh/custom/plugins/zsh-autosuggestions; \
+	fi;
+	if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then \
+		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; \
+	fi;
 
 .PHONY: brew-min
 brew-min: ## Install minimal dev setup via brew
@@ -37,7 +40,6 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/gitconfig $(HOME)/.gitconfig;
 	ln -sfn $(CURDIR)/gitignore $(HOME)/.gitignore;
 	ln -sfn $(CURDIR)/doom.d $(HOME)/.doom.d;
-	ln -sfn $(CURDIR)/kitty $(HOME)/.config/kitty;
 	ln -sfn $(CURDIR)/ghostty $(HOME)/.config/ghostty;
 	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
 	ln -sfn $(CURDIR)/starship.toml $(HOME)/.config/starship.toml;
