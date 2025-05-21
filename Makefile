@@ -42,6 +42,9 @@ brew-font: ## Install fonts via brew
 
 .PHONY: dotfiles
 dotfiles: ## Link the dotfiles.
+	if [ ! -d $(HOME)/.config ]; then \
+		mkdir -p $(HOME)/.config; \
+	fi;
 	ln -sfn $(CURDIR)/zshrc $(HOME)/.zshrc;
 	ln -sfn $(CURDIR)/zsh $(HOME)/.zsh;
 	ln -sfn $(CURDIR)/gitconfig $(HOME)/.gitconfig;
