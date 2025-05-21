@@ -1,5 +1,5 @@
 .PHONY: all
-all: ohmyzsh ohmyzsh-plugins brew-min brew-font dotfiles
+all: ohmyzsh ohmyzsh-plugins brew brew-min brew-font dotfiles
 
 .PHONY: ohmyzsh
 ohmyzsh: ## Install oh-my-zsh
@@ -14,6 +14,14 @@ ohmyzsh-plugins: ## Install oh-my-zsh plugins
 	fi;
 	if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then \
 		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; \
+	fi;
+
+.PHONY: brew
+brew: ## Install brew
+	if [ ! -d /opt/homebrew ]; then \
+		/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	else \
+		echo "Brew already installed."; \
 	fi;
 
 .PHONY: brew-min
