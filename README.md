@@ -18,6 +18,12 @@ $ cd ~/.dotfiles
 $ make
 ```
 
+If you get the `zsh: command not found: brew` message, you need to add Homebrew to your PATH.
+
+```console
+echo "export PATH="/opt/homebrew/bin:${PATH}" >> ~/.shrc
+```
+
 For a selective installation of dependencies and configs, run `make help` to see a list of all options.
 
 ```console
