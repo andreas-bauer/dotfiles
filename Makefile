@@ -35,6 +35,7 @@ brew-min: ## Install minimal dev setup via brew
 	brew install ghostty
 	brew install neovim
 	brew install starship
+	brew install node
 
 .PHONY: brew-font
 brew-font: ## Install fonts via brew
