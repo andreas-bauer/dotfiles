@@ -27,12 +27,6 @@ alias c='clear'
 alias q='exit'
 
 # System Maintenance
-alias upd='yay -Syyu && flatpak update'
-alias p='sudo pacman --color auto'
-alias progs="(pacman -Qet && pacman -Qm) | sort -u" # List programs I've installed
-alias orphans="pacman -Qdt" # List orphan programs
-alias sdn="sudo shutdown now"
-alias mirrors="sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose"
 alias buu="brew update && brew upgrade"
 
 # show more then 16 history commands (macOS)
