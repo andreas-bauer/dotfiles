@@ -17,3 +17,15 @@ format = '[$symbol$environment](dimmed green) '
 
 [rlang]
 disabled = true
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[nodejs]
+disabled = true
