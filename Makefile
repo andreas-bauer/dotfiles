@@ -50,7 +50,6 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/zsh $(HOME)/.zsh;
 	ln -sfn $(CURDIR)/gitconfig $(HOME)/.gitconfig;
 	ln -sfn $(CURDIR)/gitignore $(HOME)/.gitignore;
-	ln -sfn $(CURDIR)/doom.d $(HOME)/.doom.d;
 	ln -sfn $(CURDIR)/ghostty $(HOME)/.config/ghostty;
 	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
 	ln -sfn $(CURDIR)/starship.toml $(HOME)/.config/starship.toml;
