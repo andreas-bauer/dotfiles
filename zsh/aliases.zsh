@@ -23,7 +23,6 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # Terminal
-alias c='clear'
 alias q='exit'
 
 # System Maintenance
