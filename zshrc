@@ -5,7 +5,7 @@ export LC_CTYPE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
+export PATH=${PATH}:`go env GOPATH`/bin
 export PATH="/opt/homebrew/bin:${PATH}"
 
 # Path to your oh-my-zsh installation.
