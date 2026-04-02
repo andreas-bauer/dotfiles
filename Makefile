@@ -28,6 +28,7 @@ brew: ## Install brew
 brew-min: ## Install minimal dev setup via brew
 	brew install git
 	brew install git-delta
+	brew install lazygit
 	brew install eza
 	brew install fzf
 	brew install zoxide
@@ -50,8 +51,12 @@ dotfiles: ## Link the dotfiles.
 	ln -sfn $(CURDIR)/gitconfig $(HOME)/.gitconfig;
 	ln -sfn $(CURDIR)/gitignore $(HOME)/.gitignore;
 	ln -sfn $(CURDIR)/ghostty $(HOME)/.config/ghostty;
-	ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
+	# ln -sfn $(CURDIR)/nvim $(HOME)/.config/nvim;
 	ln -sfn $(CURDIR)/starship.toml $(HOME)/.config/starship.toml;
+
+.PHONY: link-lazyvim
+link-lazyvim: ## Link Lazyvim config and plugins.
+	ln -sfn $(CURDIR)/nvim-lazyvim/lua $(HOME)/.config/nvim/lua;
 
 .PHONY: help
 help:
