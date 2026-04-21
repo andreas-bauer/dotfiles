@@ -70,3 +70,6 @@ gfo() {
 # VIM
 alias vi='nvim'
 alias v='fzf --multi --preview "bat -n --color=always {}" --bind "enter:become(nvim {+})"'
+
+# Docker/Podman
+alias docker='podman'
