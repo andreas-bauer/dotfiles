@@ -17,6 +17,9 @@ zstyle ':omz:update' frequency 13
 
 plugins=(git zsh-autosuggestions fzf sudo globalias zsh-syntax-highlighting)
 
+# Set VI mode
+set -o vi
+
 # Load Configs
 source $ZSH/oh-my-zsh.sh
 for config (~/.zsh/*.zsh) source $config
@@ -25,3 +28,5 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 
+
+. "$HOME/.local/bin/env"
