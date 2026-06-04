@@ -61,6 +61,10 @@ tre() {
 }
 
 validateYaml() {
-    python -c 'import yaml,sys;yaml.safe_load(sys.stdin)' < $1
-}
+  if [[ -z "$1" ]]; then
+    echo "usage: validateYaml <file>" >&2
+    return 2
+  fi
 
+  ruby -e 'require "yaml"; YAML.safe_load(ARGF.read, aliases: true)' "$1"
+}
